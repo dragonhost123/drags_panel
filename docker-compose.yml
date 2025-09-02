@@ -1,0 +1,14 @@
+services:
+  api:
+    build: ./backend
+    ports:
+      - "8080:8000"   # API reachable on 8080 if you prefer
+  web:
+    build: ./frontend
+    ports:
+      - "3001:5173"   # Panel UI available on port 3001 (as you asked)
+  tools:
+    image: alpine
+    command: sleep infinity
+    ports:
+      - "4040:4040"   # reserved for future admin tools / dashboards
