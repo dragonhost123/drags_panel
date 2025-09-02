@@ -1,0 +1,3 @@
+from .routers import auth_routes, user_routes, settings_routes, node_routes
+# ...
+app.include_router(node_routes.router)
